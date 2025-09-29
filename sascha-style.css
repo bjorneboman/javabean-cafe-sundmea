@@ -1,0 +1,76 @@
+body {
+  margin: 0;
+  font-family: sans-serif;
+}
+#nav-field {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #3e2723; /* mörk kaffebrun */
+  padding: 15px;
+  position: relative;
+}
+#burger {
+  display: flex;
+  flex-direction: column;
+  gap: 5px; /*mellanrum mellan spans*/
+  background: #6e4943;
+  border: none;
+  cursor: pointer; /*gör muspekaren till en hand*/
+  padding: 10px;
+  border-radius: 15px;
+}
+#burger span {
+  /*styling av span strecken i burger*/
+  display: block;
+  width: 25px;
+  height: 3px;
+  background-color: aliceblue;
+  border-radius: 2px;
+}
+#list.open {
+  display: flex;
+  margin: 0;
+}
+#list {
+  list-style: none;
+  display: none;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background: #6e4943; /*för att se listan som fälls ut*/
+  flex-direction: column;
+  width: 150px;
+  padding: 10px;
+}
+#list a {
+  padding: 10px 0;
+  display: block;
+  color: white;
+}
+#list a:hover {
+  color: #3e2723;
+}
+#nav-field a {
+  color: aliceblue;
+  text-decoration: none;
+}
+
+@media (min-width: 786px) {
+  #list {
+    display: flex;
+    position: static;
+    flex-direction: row;
+    background: #6e4943;
+    width: auto;
+    padding: 10px;
+    gap: 30px;
+    border-radius: 10px;
+  }
+  #list a {
+    padding: 0 10px;
+  }
+  #burger {
+    display: none;
+  }
+}
