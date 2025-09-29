@@ -16,15 +16,17 @@ nav {
 
 #list {
   list-style: none;
-  display: none;
   flex-direction: column;
   position: absolute;
   top: 80px;
   right: 0;
   width: 100%;
   text-align: center;
-  padding: 10px;
   border-radius: 5px;
+  max-height: 0;
+  padding: 0;
+  overflow: hidden;
+  transition: all 0.3s ease;
 }
 #list a {
   border: 1px black solid;
@@ -63,6 +65,8 @@ h1 {
 }
 #list.open {
   display: flex;
+  padding: 10px;
+  max-height: 300px;
 }
 
 @media (min-width: 768px) {
