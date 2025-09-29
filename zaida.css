@@ -48,12 +48,11 @@ justify-content: space-between;
   margin: 10px 0;
   position: absolute;
   justify-content: right;
-  top: 70px;
-  right: 20px;
+  top: 72px;
+  right: 10px;
   width: 120px;
   background-color:rgba(63, 59, 58, 0.274);
   border-radius: 10px;
-  border: orangered 1px solid;
   padding: 10px;
 }
 #list a{
@@ -62,11 +61,12 @@ justify-content: space-between;
 }
 #list a:hover{
   color: orangered;
-
+  
 }
 
 
 #list.open {
+  border: orangered 1px solid;
   display: block;
   font-size: 24px;
 }
@@ -95,7 +95,13 @@ justify-content: space-between;
     gap: 20px;
     background: none;
     position: static;
+    font-size: 24px;
   }
+  #list a:hover{
+color: black;
+text-transform: uppercase;
+
+}
 
 
 }
