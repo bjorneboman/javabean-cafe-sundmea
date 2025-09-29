@@ -1,9 +1,11 @@
 /* styles.css */
-nav {
+#nav-field {
+  display: flex;
   justify-content: center;
-  justify-content: center;
+  background-color: orange;
+  color: grey;
+  gap: 20px;
 }
-
 #burger {
   display: flex;
   flex-direction: column;
