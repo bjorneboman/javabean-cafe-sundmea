@@ -1,98 +1,109 @@
-body{
+:root {
+    --heavy-purple: #e5eaf5;
+    --medium-purple: #d0bdf4;
+    --dark-blue: #0F1035;;
+    --pink-sand:#ffa8B6;
+}
+
+*{
     font-family: Arial, sans-serif;
     margin: 0;
-    padding: 0;
-    color: white;
-    
+    padding: 0;   
 }
+
 /* targets the whole nav bar */
 #nav-field{ 
-    background: #A9B5DF;
-    color: white;
-    padding: 10px 20px;
+    background: var(--medium-purple);
+    padding: 20px 20px;
     display: flex;
     justify-content: space-between;
+    align-content: center;
     align-items: center;
 }
 
+
 #nav-field a{
-    text-decoration: none;
-    font-size: 1.5rem;
+    display: flex;
+    gap:20px;
+    font-size: 1.5em;
     font-weight: bold;
-    padding: 10px;
-    margin: 10px;
-    line-height: 30px;
-    color: white;
+    color: var(--dark-blue);
 
 }
 
-/* this is the burger icon */
+.logo{
+    text-decoration: none;
+}
+
+/* this is the style for the burger icon */
 #burger{
-    width: 35px;
-    height: 25px;
     display:flex;
     flex-direction: column;
-    justify-content: space-between;
-    cursor: pointer;
-    background-color: #7889d2;
-    border: 2px solid white;
-    border-radius: 5px;
-
+    gap:4px;
+    cursor: pointer; 
+    border: 2px solid var(--dark-blue);
+    padding: 3px 6px;
+    border-radius: 3px;
 }
 
 #burger span{
     display: block;
-    width: 100%;
-    height: 5px;
-    background: #0F1035;
+    width: 30px;
+    height:3px;
     transition: 0.5s;
+    padding: 5px;
+    background-color:var(--dark-blue);
+}
+
+#burger:hover{
+  background-color: var(--pink-sand);
 }
 
 /* menu hidden by default */
 
-    nav .list {
-      display: none;
-      flex-direction: column;
-      list-style: none;
-      background: palevioletred;
-      border-radius: 8px;
-      padding: 10px;
-    }
-
-    nav .list a {
-      color: white;
-      text-decoration: none;
-      
-      padding: 8px 0;
-    }
-
-    nav .list a:hover {
-      background: #471717;
-    }
-
-     /* Show menu when active */
-    nav .list.active {
-      display: flex;
-    }
+nav .list{
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    position: absolute;
+    top: 5%;
+    right:5%;
+    margin-top: 70px;
+    list-style: none;
+}
 
 
-     /* Larger screens: show menu inline */
+nav .list a {
+    text-decoration: none;
+    justify-content: right;
+}
+
+nav a:hover {
+    background-color:var(--pink-sand);
+    padding:0;
+}  
+
+/* Show menu when active */
+nav .list.open {
+  display: flex;
+}
 
 
+/* Larger screens: show menu inline */
 @media (min-width: 800px){
 #list {
     display: flex;
+    gap: 2rem;
     position: static;
     flex-direction: row;
-    background: #E5989B;
-    padding: 40px 50px;
-    border: 2px solid yellow;
-    width: auto;
-    padding: 0;
+    padding: 2px 5px;    
+    
 }
-menu a {
-    padding: 0 10px;
+
+#list a{
+color: maroon;
 }
+
 
 #burger{
     display: none;
