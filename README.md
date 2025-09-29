@@ -8,7 +8,7 @@ Projektet innehåller en responsiv hamburger-meny som öppnas och stängs när m
 
 Varje person har gjort olika lösningar för att öva på:
 
-- CSS-styling
+- CSS-styling.
 - JavaScript och DOM-manipulation
 - Responsiv design
 
@@ -16,7 +16,7 @@ Varje person har gjort olika lösningar för att öva på:
 
 - Klickbar hamburgarikon som öppnar och stänger menyn.
 
-## Anvädning
+## Användning
 
 1. Öppna index.html i webbläsaren.
 2. Ändra webbläsarfönstrets bredd till mobilstorlek eller öppna sidan på en mobil enhet.
@@ -24,6 +24,6 @@ Varje person har gjort olika lösningar för att öva på:
 
 ## Syfte med övningen
 
-- Öva på **JavaScript DOM-manipulation och interaktivitet**
+- Öva på **JavaScript DOM-manipulation och interaktivitet.**
 - Öva på **mobile-first design.**
 - Bekanta oss mer med **projektorganisation i GitHub.**
