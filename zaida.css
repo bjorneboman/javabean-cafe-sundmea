@@ -24,8 +24,7 @@
   list-style: none;
   padding: 0;
   margin: 10px 0;
-  list-style: none;
-  text-decoration: none;
+
 }
  li a {
   color: blue;
@@ -47,4 +46,19 @@
 
 #burger.open span:nth-child(3) {
   transform: rotate(-45deg) translate(6px, -6px);
+}
+
+@media (min-width: 700px) {
+
+  #burger {
+    display: none;
+  }
+  #list {
+    display: flex;
+    gap: 20px;
+    margin: 0;
+  }
+  #list li {
+    list-style: none;
+  }
 }
