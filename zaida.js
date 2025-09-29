@@ -5,6 +5,5 @@ const list = document.getElementById("list");
 
 // När jag trycker på knappen så skall både burgaren och listan öppnas
 burger.addEventListener("click", () => {
-  burger.classList.toggle("open");
   list.classList.toggle("open");
 });
