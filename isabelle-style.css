@@ -1,0 +1,114 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: var(--black-color);
+}
+
+:root {
+  --primary-color: #202c39;
+  --secondary-color: #283845;
+  --accent-color: #f29559;
+  --white-color: #ffffff;
+  --black-color: #101010;
+}
+
+/* Navbar */
+nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  background: var(--primary-color);
+  color: var(--white-color);
+}
+
+/* Hamburger-menu - hidden */
+#list {
+  display: none;
+  flex-direction: column;
+  background-color: var(--primary-color);
+  color: var(--white-color);
+  position: absolute;
+  top: 50px;
+  right: 0;
+  width: 50px;
+  padding: 10px;
+  border-radius: 5px;
+  height: 100vh;
+}
+
+#list a {
+  display: block;
+}
+
+#list.open {
+  display: flex;
+}
+
+/* Hamburger-menu */
+
+#burger {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  padding: 10px;
+}
+
+#burger span {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background-color: var(--white-color);
+  border-radius: 2px;
+}
+
+#burger:hover span {
+  background-color: var(--accent-color);
+}
+
+@media (min-width: 708px) {
+  #list {
+    display: flex;
+    position: static;
+    flex-direction: row;
+    background: none;
+    width: auto;
+    padding: 0;
+    height: 2rem;
+  }
+
+  #list a {
+    padding: 0 10px;
+    color: var(--white-color);
+  }
+
+  #burger {
+    display: none;
+  }
+}
+
+/* Typography */
+li {
+  list-style-type: none;
+  margin: 0.5rem 0;
+}
+
+a {
+  text-decoration: none;
+  color: var(--white-color);
+}
+
+a:visited {
+  color: inherit;
+}
+
+a:hover {
+  color: var(--accent-color);
+}
