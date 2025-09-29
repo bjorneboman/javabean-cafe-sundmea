@@ -1,10 +1,12 @@
 const burger = document.getElementById("burger");
 const menu = document.getElementById("list");
+const root = document.documentElement;
 
 /* Toggle menu */
 burger.addEventListener("click", () => {
   menu.classList.toggle("open");
-  menu.style.backgroundColor = "red";
+
+  menu.style.backgroundColor = secondaryColor;
 });
 
 /* Close menu on escape */
