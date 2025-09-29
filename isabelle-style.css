@@ -16,6 +16,21 @@ body {
   --black-color: #101010;
 }
 
+/* Typography */
+li {
+  list-style-type: none;
+  margin: 0.5rem 0;
+}
+
+a {
+  text-decoration: none;
+  color: var(--white-color);
+}
+
+a:visited {
+  color: inherit;
+}
+
 /* Navbar */
 nav {
   display: flex;
@@ -89,26 +104,11 @@ nav {
     color: var(--white-color);
   }
 
+  #list a:hover {
+    color: var(--accent-color);
+  }
+
   #burger {
     display: none;
   }
-}
-
-/* Typography */
-li {
-  list-style-type: none;
-  margin: 0.5rem 0;
-}
-
-a {
-  text-decoration: none;
-  color: var(--white-color);
-}
-
-a:visited {
-  color: inherit;
-}
-
-a:hover {
-  color: var(--accent-color);
 }
