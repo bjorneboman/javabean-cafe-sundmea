@@ -29,14 +29,15 @@ nav {
 #list {
   display: none;
   flex-direction: column;
-  background-color: var(--secondary-color);
+  background-color: var(--primary-color);
   color: var(--white-color);
   position: absolute;
   top: 50px;
   right: 0;
-  width: 100px;
+  width: 50px;
   padding: 10px;
   border-radius: 5px;
+  height: 100vh;
 }
 
 #list a {
@@ -45,25 +46,6 @@ nav {
 
 #list.open {
   display: flex;
-}
-
-@media (min-width: 708px) {
-  #menu {
-    display: flex;
-    position: static;
-    flex-direction: row;
-    background: none;
-    width: auto;
-    padding: 0;
-  }
-
-  #menu a {
-    padding: 0 10px;
-  }
-
-  #hamburger {
-    display: none;
-  }
 }
 
 /* Hamburger-menu */
@@ -89,6 +71,26 @@ nav {
 
 #burger:hover span {
   background-color: var(--accent-color);
+}
+
+@media (min-width: 708px) {
+  #list {
+    display: flex;
+    position: static;
+    flex-direction: row;
+    background: none;
+    width: auto;
+    padding: 0;
+    height: 2rem;
+  }
+
+  #list a {
+    padding: 0 10px;
+  }
+
+  #burger {
+    display: none;
+  }
 }
 
 /* Typography */
