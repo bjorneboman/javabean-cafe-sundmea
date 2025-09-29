@@ -1,4 +1,4 @@
-# javabean-cafe-sundmea
+# JavaBean Café
 
 Det här projektet är en övning i CSS och Javascript, där varje person skapat sin egna hamburgermeny.
 
