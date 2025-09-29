@@ -33,7 +33,9 @@ nav {
   border-radius: 0;
   padding: 10px;
   background-color: goldenrod;
+  margin-bottom: -1px;
 }
+
 #list a:hover {
   filter: brightness(1.2);
 }
