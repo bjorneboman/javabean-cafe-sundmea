@@ -1,11 +1,25 @@
 /* styles.css */
-#nav-field {
+#nav-field{
   display: flex;
+  flex-direction:row;
   justify-content: center;
-  background-color: orange;
-  color: grey;
+  background-color: rgb(247, 82, 16);
   gap: 20px;
+  font-size: 30px;
 }
+#nav-field a{
+  color: rgb(62, 61, 61);
+  text-decoration: none;
+  display: flex;
+
+}
+body{
+  background-color: grey;
+}
+title{
+  justify-content: left;
+}
+
 #burger {
   display: flex;
   flex-direction: column;
@@ -18,7 +32,7 @@
 
 #burger span {
   display: block;
-  width: 25px;
+  width: 45px;
   height: 4px;
   background-color: black;
   border-radius: 2px;
@@ -36,6 +50,7 @@ li a {
   color: blue;
   list-style: none;
   text-decoration: none;
+  font-size: 20px;
  }
 
 #list.open {
