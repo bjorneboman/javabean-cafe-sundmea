@@ -1,4 +1,8 @@
 /* styles.css */
+nav {
+  justify-content: center;
+  justify-content: center;
+}
 
 #burger {
   display: flex;
@@ -24,9 +28,9 @@
   list-style: none;
   padding: 0;
   margin: 10px 0;
-
+  
 }
- li a {
+li a {
   color: blue;
   list-style: none;
   text-decoration: none;
