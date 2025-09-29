@@ -3,4 +3,5 @@ const list = document.getElementById("list");
 
 burger.addEventListener("click", () => {
   list.classList.toggle("open");
+  burger.classList.toggle("active");
 });
