@@ -1,12 +1,52 @@
+:root {
+  --color-dark: #302525;
+  --color-light: #dcb;
+}
+
+body {
+  font-family: "SUSE Mono", sans-serif;
+}
+
+/* The whole navbar */
 #nav-field {
   display: flex;
   justify-content: right;
   align-items: center;
   padding: 10px 20px;
-  background-color: #ccc;
+  background-color: var(--color-light);
   position: relative;
 }
+h1 {
+  flex-grow: 1;
+  margin: 0;
+  font-family: "Berkshire Swash", serif;
+  font-size: 2rem;
+  color: var(--color-dark);
+}
 
+/* The hamburger button */
+#hamburger {
+  width: 50px;
+  border-radius: 5px;
+  padding: 10px;
+  background-color: var(--color-dark);
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 24px;
+  line-height: 40%;
+  span {
+    border-top: white 2px solid;
+  }
+  cursor: pointer;
+}
+#hamburger:hover {
+  span {
+    border-color: #bada55;
+  }
+}
+
+/* On small screens the menu is toggled by the hamburger button */
 #menu {
   opacity: 0;
   display: flex;
@@ -17,14 +57,32 @@
   right: 0px;
   width: 200px;
   padding: 10px;
-  background-color: #333;
+  background-color: var(--color-dark);
   border-radius: 5px;
   list-style: none;
   li:hover {
-    background-color: #444;
+    background-color: #ffffff20;
+  }
+  a {
+    color: white;
+    text-decoration: none;
+    padding: 8px 10px;
+    display: block;
+  }
+  a:hover {
+    color: #bada55;
   }
   animation: hide 0.3s ease-out 1 normal forwards;
 }
+#menu.open {
+  display: flex;
+  animation: fadeIn 0.3s ease-out 1 normal forwards;
+}
+#menu.closed-at-load {
+  display: none;
+}
+
+/* Animations for when opening and closing the menu */
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -42,32 +100,40 @@
     display: none;
   }
 }
-#menu.open {
-  display: flex;
-  animation: fadeIn 0.3s ease-out 1 normal forwards;
-}
-#menu.closed-at-load {
-  display: none;
-}
-#menu a {
-  color: white;
-  text-decoration: none;
-  padding: 8px 10px;
-  display: block;
-}
 
-#hamburger {
-  width: 50px;
-  border-radius: 5px;
-  padding: 10px;
-  background-color: #333;
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-  font-size: 24px;
-  line-height: 40%;
-  span {
-    border-top: #bada55 2px solid;
+/* Media query for larger screens */
+
+@media (min-width: 650px) {
+  #hamburger {
+    display: none;
   }
-  cursor: pointer;
+
+  /* Menu is now displayed on a row */
+  #menu {
+    margin: 0;
+    position: static;
+    height: 100%;
+    display: flex !important;
+    flex-direction: row;
+    justify-content: space-between;
+    opacity: 1;
+    animation: none;
+    background-color: transparent;
+    width: auto;
+    padding: 0;
+    gap: 0;
+    li:hover {
+      background-color: #444;
+      transition: all 0.3s ease;
+    }
+    a {
+      margin: 0;
+      padding: auto 1rem;
+      color: #333;
+      transition: all 0.3s ease;
+    }
+    a:hover {
+      color: #bada55;
+    }
+  }
 }
